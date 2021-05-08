@@ -1,0 +1,40 @@
+﻿<!--Group 3: Mereesh Moothatt, Pengshuo Liu, Pierre Loubateres, Stephen Chintalapudi, Abhishek Sawant-->
+<Window x:Class="RiverFormation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RiverFormation"
+        mc:Ignorable="d"
+        Title="By the River Side" Height="500" Width="760" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Image Source="images/river.jpg" Grid.ColumnSpan="2" Grid.RowSpan="5" Stretch="Fill" Opacity="0.4"></Image>
+
+        <Label Grid.ColumnSpan="2" Content="A Walk by the River" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Cooper Black" FontSize="42"></Label>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Longest River Width" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalContentAlignment="Right" Margin="30 5 5 5" BorderBrush="black" BorderThickness="3" Background="LightGray"></Label>
+        <Rectangle Grid.Row="1" Grid.Column="1" StrokeThickness="3" Stroke="Black" Margin="10 15 400 15" Fill="White" Opacity="0.9"></Rectangle>
+        <TextBlock Name="txtLinewidth" Grid.Row="1" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20"></TextBlock>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Longest River Size" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalContentAlignment="Right" Margin="30 5 5 5" BorderBrush="black" BorderThickness="3" Background="LightGray"></Label>
+        <Rectangle Grid.Row="2" Grid.Column="1" StrokeThickness="3" Stroke="Black" Margin="10 15 400 15" Fill="White" Opacity="0.9"></Rectangle>
+        <TextBlock Name="txtRiverSize" Grid.Row="2" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20"></TextBlock>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Longest Possible River" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalContentAlignment="Right" Margin="30 5 5 5" BorderBrush="black" BorderThickness="3" Background="LightGray"></Label>
+        <ListBox Name="lblRiverFormation" FontFamily="Courier New" Grid.Row="3" Grid.Column="1" FontSize="18" Margin="12 6 150 6" Opacity="0.9" BorderBrush="Black" BorderThickness="3.5"></ListBox>
+
+        <Button Name="Reset" Grid.Row="4" Grid.Column="1" Content="Reset" FontWeight="Bold" Width="90" Height="40" Margin="375 5 0 5" FontSize="22" Click="Reset_Click"></Button>
+        <Button Name="Start" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Upload File" FontWeight="Bold" Width="150" Height="40" Margin="100 5 0 5" FontSize="22" Click="Start_Click"></Button>
+    </Grid>
+</Window>
